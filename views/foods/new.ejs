@@ -1,0 +1,27 @@
+<!-- views/applications/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Add a New App</title>
+</head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add New Item</h1>
+
+      <form action="/users/<%= user._id %>/foods" method="POST">
+
+    <label for="company">Item:</label>
+    <input type="text" name="itemName" id="itemName">
+    <br>
+    <label for="title">Category:</label>
+    <input type="text" name="category" id="category">
+    <br>
+        <button type="submit">Add Item</button>
+  </form>
+
+  </body>
+</html>

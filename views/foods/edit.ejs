@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Editing <%= food.itemName %></title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+  <h1>Edit <%= food.itemName %></h1>
+  <form 
+    action="/users/<%= user._id %>/foods/<%= food._id %>?_method=PUT"
+    method="POST"
+  >
+    <label for="company">Item Name:</label>
+    <input 
+      type="text" 
+      name="itemName" 
+      id="itemName" 
+      value="<%= food.itemName %>"
+    >
+
+    <label for="company">Item Category:</label>
+    <input 
+      type="text" 
+      name="category" 
+      id="category" 
+      value="<%= food.category %>"
+    >
+    <button type="submit">Update Application</button>
+  </form>
+</body>
+</html>

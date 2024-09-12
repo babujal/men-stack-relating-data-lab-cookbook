@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Comunity</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Welcome to the comunity page</h1>
+    <h1>Our Comunity Members</h1>
+    <ul>
+        <% comunity.forEach((el)=>{ %>
+          <li>
+            <a href="/users/<%= el._id %>">
+                <%= el.username %>
+            </a>
+          </li>
+        <% }) %>
+      </ul>
+  </body>
+</html>
